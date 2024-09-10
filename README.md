@@ -5,7 +5,8 @@
 大乱闘スマッシュブラザーズの試合に参加することができます！
 
 ③DEMO
-[https://blueweasel38.sakura.ne.jp/bookmark/index.php
+[[https://gsdeploy.sakura.ne.jp/bookmark/index.php]
+
 
 ④作ったアプリケーション用のIDまたはPasswordがある場合
 なし
