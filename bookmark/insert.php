@@ -23,7 +23,7 @@ try {
 
 
 //３．データ登録SQL作成
-$sql = "INSERT INTO gs_bm_table(name,gender,x_account_url,region,main_character,requests)VALUES(:name, :gender, :x_account_url, :main_character, :requests,sysdate())";
+$sql = "INSERT INTO gs_bm_table(id,name,gender,x_account_url,region,main_character,requests,recorded_date) VALUES(:id,:name, :gender, :x_account_url, :region, :main_character, :requests, sysdate())";
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':name', $name, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
