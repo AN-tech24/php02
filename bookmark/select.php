@@ -2,16 +2,20 @@
 //エラー表示
 ini_set("display_errors", 1);
 
+//2. DB接続します
 try {
   //Password:MAMP='root',XAMPP=''
   // 下のどちらかを記載する
 // 　さくらのサーバ　Githubに挙げるときは消す
-  // $pdo = new PDO('mysql:dbname=gsdeploy_unit1;charset=utf8;host=mysql57.gsdeploy.sakura.ne.jp','gsdeploy','8130mama');
+  //
   // PCでのローカル
-  $pdo = new PDO('mysql:dbname=gs_kadai;charset=utf8;host=localhost','******','******');
+  // $pdo = new PDO('mysql:dbname=gs_kadai;charset=utf8;host=localhost','root','');
+
+  $pdo = new PDO('mysql:dbname=gsdeploy_unit2;charset=utf8;host=mysql57.gsdeploy.sakura.ne.jp','','');
 } catch (PDOException $e) {
   exit('DBError:'.$e->getMessage());
 }
+
 //２．データ登録SQL作成
 $stmt = $pdo->prepare("SELECT * FROM gs_bm_table");
 $status = $stmt->execute();
